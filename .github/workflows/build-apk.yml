@@ -1,4 +1,4 @@
-name: build-apk
+name: Build Android APK
 
 on:
   push:
@@ -16,7 +16,8 @@ jobs:
           java-version: '11'
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.10.6'
+          flutter-version: '3.19.0'  # Versão atualizada do Flutter
+          channel: 'stable'
       - run: flutter pub get
       - run: flutter build apk --debug
       - name: Check if APK exists
