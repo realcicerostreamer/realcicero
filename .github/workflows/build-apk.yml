@@ -1,4 +1,4 @@
-name: Build Android APK
+name: build-apk
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
           java-version: '11'
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.10.6' # Usa Dart 3.7.x
+          flutter-version: '3.10.6'
       - run: flutter pub get
       - run: flutter build apk --debug
       - name: Check if APK exists
