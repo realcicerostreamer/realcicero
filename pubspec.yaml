@@ -4,14 +4,15 @@ version: 1.0.0
 # Created by Cicero
 
 environment:
-  sdk: '>=3.0.0 <4.0.0' # Atualizado para a versão mais recente compatível
+  sdk: '>=3.22.0 <4.0.0' # Versão mais recente do Flutter em 2025
 
 dependencies:
   flutter:
     sdk: flutter
   http: ^1.2.0
   webview_flutter: ^4.5.0
-  flutter_vlc_player: ^7.2.0
+  flutter_vlc_player: ^7.2.0 # Para streaming RTSP
+  video_player: ^2.9.0 # Alternativa para vídeo, caso necessário
 
 dev_dependencies:
   flutter_test:
