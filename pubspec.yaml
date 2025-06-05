@@ -4,13 +4,14 @@ version: 1.0.0
 # Created by Cicero
 
 environment:
-  sdk: '>=3.7.0 <4.0.0'
+  sdk: '>=3.3.0 <4.0.0'  # Ajustado para compatibilidade com CI
 
 dependencies:
   flutter:
     sdk: flutter
   http: ^1.1.0
   webview_flutter: ^4.4.1
+  flutter_vlc_player: ^7.1.4
   video_player: ^2.7.0
   ffmpeg_kit_flutter: ^6.0.3  # Substitui flutter_ffmpeg
   permission_handler: ^11.0.0  # Para gerenciar permissões
