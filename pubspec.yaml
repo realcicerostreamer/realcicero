@@ -4,20 +4,20 @@ version: 1.0.0
 # Created by Cicero
 
 environment:
-  sdk: '>=3.22.0 <4.0.0' # Versão mais recente do Flutter em 2025
+  sdk: '>=3.8.0 <3.9.0' # Compatível com Dart 3.8.1 (Flutter 3.8.x)
 
 dependencies:
   flutter:
     sdk: flutter
-  http: ^1.2.0
-  webview_flutter: ^4.5.0
-  flutter_vlc_player: ^7.2.0 # Para streaming RTSP
-  video_player: ^2.9.0 # Alternativa para vídeo, caso necessário
+  http: ^1.1.0 # Versão compatível com Dart 3.8.x
+  webview_flutter: ^4.4.2 # Versão compatível
+  flutter_vlc_player: ^7.1.5 # Versão compatível
+  video_player: ^2.8.0 # Versão compatível
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.2
+  flutter_lints: ^3.0.0 # Versão compatível
 
 flutter:
   uses-material-design: true
