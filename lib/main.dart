@@ -2,19 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter_vlc_player/flutter_vlc_player.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: StreamScreen(),
     );
   }
 }
 
 class StreamScreen extends StatefulWidget {
+  const StreamScreen({super.key});
+
   @override
   _StreamScreenState createState() => _StreamScreenState();
 }
@@ -26,7 +30,7 @@ class _StreamScreenState extends State<StreamScreen> {
   void initState() {
     super.initState();
     _controller = VlcPlayerController.network(
-      'rtsp://192.168.1.1:554/live', // URL da COOAU
+      'rtsp://192.168.1.1:554/live',
       hwAcc: HwAcc.full,
       autoPlay: true,
       options: VlcPlayerOptions(),
@@ -42,12 +46,12 @@ class _StreamScreenState extends State<StreamScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('realCicero Stream')),
+      appBar: AppBar(title: const Text('realCicero Stream')),
       body: Center(
         child: VlcPlayer(
           controller: _controller,
           aspectRatio: 16 / 9,
-          placeholder: Center(child: CircularProgressIndicator()),
+          placeholder: const Center(child: Text('Loading...')),
         ),
       ),
     );
