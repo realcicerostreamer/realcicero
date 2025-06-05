@@ -9,7 +9,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  ffmpeg_kit_flutter: ^6.0.3
   http: ^1.1.0
   webview_flutter: ^4.5.0
   flutter_vlc_player: ^7.2.0
