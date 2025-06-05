@@ -16,7 +16,7 @@ jobs:
           java-version: '11'
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.7.12' # Versão existente no canal stable
+          flutter-version: '3.10.6' # Usa Dart 3.7.x
       - run: flutter pub get
       - run: flutter build apk --debug
       - name: Check if APK exists
