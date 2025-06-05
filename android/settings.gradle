@@ -11,9 +11,11 @@ if (pluginsFile.exists()) {
     }
 }
 
-plugins.each { name, path ->
-    def pluginDirectory = new File(flutterProjectRoot, path).toPath()
-    def androidPluginDir = pluginDirectory.resolve('android').toFile()
+for (def entry : plugins) {
+    def name = entry.key
+    def path = entry.value
+    def pluginDirectory = new File(flutterProjectRoot, path)
+    def androidPluginDir = new File(pluginDirectory, 'android')
     if (androidPluginDir.exists()) {
         include ":$name"
         project(":$name").projectDir = androidPluginDir
