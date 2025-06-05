@@ -4,12 +4,12 @@ version: 1.0.0
 # Created by Cicero
 
 environment:
-  sdk: '>=2.18.0 <3.0.0'
+  sdk: '>=3.0.0 <4.0.0' # Atualizado para a versão mais recente compatível
 
 dependencies:
   flutter:
     sdk: flutter
-  http: ^1.1.0
+  http: ^1.2.0
   webview_flutter: ^4.5.0
   flutter_vlc_player: ^7.2.0
 
