@@ -4,20 +4,20 @@ version: 1.0.0
 # Created by Cicero
 
 environment:
-  sdk: '>=3.7.0 <3.8.0' # Compatível com Flutter 3.7.12 (Dart 3.7.x)
+  sdk: '>=3.7.0 <3.8.0'
 
 dependencies:
   flutter:
     sdk: flutter
   http: ^1.1.0
-  webview_flutter: ^4.4.1 # Versão compatível
-  flutter_vlc_player: ^7.1.4 # Versão compatível
-  video_player: ^2.7.0 # Versão compatível
+  webview_flutter: ^4.4.1
+  flutter_vlc_player: ^7.1.4
+  video_player: ^2.7.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0 # Versão compatível
+  flutter_lints: ^2.0.0
 
 flutter:
   uses-material-design: true
