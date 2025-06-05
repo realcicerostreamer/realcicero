@@ -1,5 +1,5 @@
 def localProperties = new Properties()
-def localPropertiesFile = new File(rootProject.projectDir, 'local.properties')
+def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
     localPropertiesFile.withReader('UTF-8') { reader ->
         localProperties.load(reader)
@@ -26,36 +26,32 @@ apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    namespace "com.example.realcicero"
-    compileSdk 34 # Última versão disponível em 2025
-    defaultConfig {
-        applicationId "com.example.realcicero"
-        minSdk 21
-        targetSdk 34
-        versionCode flutterVersionCode.toInteger()
-        versionName flutterVersionName
-    }
+    compileSdkVersion 33
+    
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
+
+    defaultConfig {
+        applicationId "com.cicero.realcicero"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+    }
+
     buildTypes {
         release {
             signingConfig signingConfigs.debug
         }
     }
-}
-
-flutter {
-    source '../..'
-}
-
-dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.22" # Atualizado
 }
