@@ -31,7 +31,6 @@ class _StreamScreenState extends State<StreamScreen> {
     super.initState();
     _controller = VlcPlayerController.network(
       'rtsp://192.168.1.1:554/live',
-      hwAcc: HwAcc.full,
       autoPlay: true,
       options: VlcPlayerOptions(),
     );
